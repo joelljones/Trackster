@@ -3,6 +3,11 @@
 */
 html {
   font-size: 16px;
+  font-family: "Work Sans";
+}
+
+body {
+  font-size: 1rem;
 }
 
 header {
@@ -15,24 +20,73 @@ header h1 {
   color: rgb(255, 0, 171);
 }
 
-#search-input,
-#search-button {
-  border-radius: 30px;
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
 }
 
+#search-input,
 #search-button {
+  border-radius: 20px;
+  padding: .5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-input {
   color: rgb(191, 191, 191);
+  margin-right: .5rem;
+}
+
+#search-input:active {
+  color: rgb(74, 74, 74);
 }
 
 #search-button {
   background-color: rgb(255, 102, 204);
-}
-
-.fa-search {
   color: rgb(35, 2, 63);
+  display: flex;
+  justify-content: center;
 }
 
-.row {
+#search-button:hover {
+  background-color: rgb(255, 0, 171);
+  cursor: pointer;
+}
+
+.attributes {
+  background-color: rgb(104, 0, 255);
+  color: rgb(255, 255, 255);
+  padding: .5rem 0;
+}
+
+.track {
+  color: rgb(74, 74, 74);
+  border-bottom: 1px solid rgb(204, 204, 204);
+  background-color: white;
+  display: flex;
+  padding: .5rem;
+}
+
+.track:hover {
+  background-color: rgb(239, 237, 242);
+}
+
+.track div {
   display: flex;
   align-items: center;
+}
+
+.play-button a {
+  display: flex;
+  align-items: center;
+  color: rgb(255, 0, 171);
+}
+
+.play-button a:hover {
+  color: rgb(255, 102, 204);
+  text-decoration: none;
 }
