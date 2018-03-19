@@ -7,6 +7,14 @@ $(function() {
     // select the input box and use the .val() method to access the input text
     Trackster.searchTracksByTitle($('#search-input').val());
   });
+
+  $('input').keydown(function(event) {
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode == '13') {
+      Trackster.searchTracksByTitle($('#search-input').val());
+    }
+  });
+
 });
 
 /*
