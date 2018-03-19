@@ -24,7 +24,7 @@ Trackster.renderTracks = function(tracks) {
     var mediumAlbumArt = track.image[1]["#text"];
     var htmlTrackRow =
       '<div class="row track">' +
-      '  <div class="col-xs-1 col-xs-offset-1 play-button">' +
+      '  <div class="col-xs-offset-1 col-xs-1 play-button">' +
       '    <a href="'+ track.url + '" target="_blank">' +
       '      <i class="fa fa-play-circle-o fa-2x"></i>' +
       '    </a>' +
@@ -32,7 +32,7 @@ Trackster.renderTracks = function(tracks) {
       '  <div class="col-xs-4">' + track.name + '</div>' +
       '  <div class="col-xs-2">' + track.artist + '</div>' +
       '  <div class="col-xs-2"><img src="' + mediumAlbumArt + '"/></div>' +
-      '  <div class="col-xs-2">' + track.listeners + '</div>' +
+      '  <div class="col-xs-2">' + numeral(track.listeners).format('0,0') + '</div>' +
       '</div>';
 
     // add this new track HTML to the list of tracks
